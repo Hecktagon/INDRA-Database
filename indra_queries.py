@@ -5,8 +5,6 @@ Simple, readable wrappers around the INDRA package's built-in database client.
 
 Setup:
     pip install indra
-    export INDRA_DB_REST_URL="https://db.indra.bio"
-    export INDRA_DB_REST_API_KEY="your_key_here"
 
 Usage:
     from indra_queries import *

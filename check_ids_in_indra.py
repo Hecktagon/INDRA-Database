@@ -1,7 +1,7 @@
 from indra.sources.indra_db_rest.api import get_statements
 import pandas as pd
 from random import sample
-from main import get_random_sample
+from main import get_sample_ids
 
 def check_uniprot_ids_in_indra(uniprot_ids):
     """Check which UniProt IDs have any relationships in the INDRA database."""
@@ -22,5 +22,5 @@ def check_uniprot_ids_in_indra(uniprot_ids):
 
 if __name__ == "__main__":
     rand_sample_filename = input("Provide a filepath to sample: ")
-    sampled_ids = get_random_sample(rand_sample_filename, sample_size=50)
+    sampled_ids = get_sample_ids(rand_sample_filename, sample_size=50)
     found_ids, not_found_ids = check_uniprot_ids_in_indra(sampled_ids)

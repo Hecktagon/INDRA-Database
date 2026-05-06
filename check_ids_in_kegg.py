@@ -1,5 +1,5 @@
 import requests
-from main import get_random_sample
+from main import get_sample_ids
 
 def uniprot_to_kegg(uniprot_ids):
     """Convert a list of UniProt accessions to KEGG gene IDs."""
@@ -23,7 +23,7 @@ def uniprot_to_kegg(uniprot_ids):
 
 # Example
 if __name__ == "__main__":
-    ids = get_random_sample("Old_Fold_Changes.csv", "Accession", 50)
+    ids = get_sample_ids("Old_Fold_Changes.csv", "Accession", 50)
     mapping = uniprot_to_kegg(ids)
     print(f"{len(mapping)}/{len(ids)} mappings found.")
     print(mapping)
