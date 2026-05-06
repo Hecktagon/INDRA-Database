@@ -1,6 +1,6 @@
 # Quick Start Guide  
 
-1. This program requires the indra library, which you need to download by typing `pip install indra` in your terminal.  
+1. This program requires the indra and pandas libraries, which you need to download by typing `pip install indra` and `pip install pandas` in your terminal.  
 
 2. Run `main.py` to start the program, it will prompt you for all needed information. Outputs will be printed to the console, but as of right now are not saved to any files.
 

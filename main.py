@@ -1,5 +1,6 @@
 from indra_queries import get_interactions_for_many ,add_namespace
-from check_ids_in_indra import *
+import pandas as pd
+from random import sample
 
 def get_sample_ids(csv_file, id_column="Accession", sample_size=20):
     ids_df = pd.read_csv(csv_file)
@@ -32,4 +33,4 @@ if __name__ == "__main__":
         print(f"{key}: {val}")
         if not val:
             count_missing += 1
-    print(f"\nStatements found for {len(ids_list)-count_missing}/{len(ids_list)} genes:")
+    print(f"\nStatements found for {len(ids_list)-count_missing}/{len(ids_list)} genes.")
